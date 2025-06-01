@@ -1,1 +1,214 @@
 /* Add you CSS here */
+
+/* Set the main colors for the website and add a blurred gold/maroon background */
+body {
+  background: linear-gradient(120deg, #ffd700 0%, #800000 100%);
+  /* Use a pseudo-element for the blur effect */
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Blurred background effect using a pseudo-element */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  background: linear-gradient(120deg, #ffd700 0%, #800000 100%);
+  filter: blur(16px);
+  opacity: 0.7;
+}
+
+/* Make every single text maroon */
+* {
+  color: #800000 !important;
+}
+
+/* Set the same font for the whole site, including headings */
+body, h1, h2 {
+  font-family: Arial, sans-serif;
+}
+
+/* Style the navigation bar */
+nav {
+  background-color: #fff7b2; /* butter yellow */
+  padding: 10px 0;
+  border-bottom: 4px solid #ffd700; /* gold line under nav */
+  /* Center the navigation bar content */
+  display: flex;
+  justify-content: center;
+}
+
+/* Style the navigation links - horizontal and centered */
+nav ul {
+  list-style-type: none; /* remove bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex; /* display links in a row */
+  gap: 30px; /* space between links */
+  align-items: center;
+}
+
+/* Style each navigation link */
+nav ul li {
+  display: block; /* each link in its own block for spacing */
+  margin: 0;
+}
+
+/* Style the navigation links - maroon text */
+nav ul li a {
+  color: #800000 !important; /* maroon color for links */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 8px 16px; /* add padding for a button-like look */
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #800000 !important; /* maroon on hover */
+  background-color: #ffd700;
+  border-radius: 6px;
+  padding: 8px 16px;
+}
+
+/* Style each section with a butter yellow background */
+section {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff7b2; /* butter yellow */
+  border: 2px solid #ffd700; /* gold border */
+  border-radius: 8px;
+  box-shadow: 0 4px 16px #ffd70044; /* soft gold shadow for card effect */
+}
+
+/* Alternate section backgrounds for more color (keep butter yellow for all) */
+section:nth-child(even) {
+  background-color: #fff7b2; /* butter yellow */
+}
+
+/* Fun hover effect for sections */
+section:hover {
+  box-shadow: 0 4px 16px #ffd70088;
+  transform: scale(1.02);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+/* Style headings */
+h1, h2 {
+  color: #800000; /* maroon */
+}
+
+h1 {
+  text-shadow: 2px 2px 0 #ffd700; /* Add a gold shadow to main headings for fun */
+  font-size: 2.5em; /* Increased font size for the main heading */
+}
+
+h2 {
+  border-bottom: 3px solid #ffd700;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* Style the hero section specifically */
+#hero {
+  text-align: center;
+  background-color: #fff7b2; /* butter yellow */
+  color: #800000; /* maroon text */
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+#hero p::before {
+  content: "✨ "; /* Add a fun emoji to the hero section */
+}
+
+/* Make the tagline in the hero section stand out */
+#hero em {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #b8860b !important; /* dark gold */
+}
+
+/* Make list items in skills section more colorful */
+#skills ul li {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* Add some space below the navigation */
+body > nav {
+  margin-bottom: 20px;
+}
+
+/* Center align and darken the About Me section, but keep butter yellow */
+.bio-center {
+  text-align: center;
+  background-color: #fff7b2 !important; /* butter yellow */
+  border: 2px solid #ffd700;
+  box-shadow: 0 2px 10px #80000044;
+}
+
+/* Make images (if added) rounded and add a border */
+img {
+  border-radius: 12px;
+  border: 2px solid #ffd700;
+  max-width: 100%;
+  margin: 10px 0;
+}
+
+/* Style the contact section link */
+#contact a {
+  color: #800000 !important;
+  text-decoration: underline;
+}
+
+/* Reduce space below the main heading in hero section */
+#hero h1 {
+  margin-bottom: 10px; /* Reduce space below the main heading */
+}
+
+/* Remove extra margin from the first paragraph in hero */
+#hero p:first-of-type {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+/* Make images rounder and centered, and increase size for hero image */
+#hero img {
+  display: block;
+  margin: 30px auto 10px auto; /* Increased top margin for more gap from the top */
+  border-radius: 50%;
+  border: 3px solid #ffd700;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center 30%;
+  scale: 1.15;
+}
+
+/* Style for the main button */
+.main-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 24px;
+  background-color: #ffd700;
+  color: #800000 !important;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1em;
+  box-shadow: 0 2px 8px #80000033;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.main-btn:hover {
+  background-color: #800000;
+  color: #ffd700 !important;
+}
